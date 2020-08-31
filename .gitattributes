@@ -1,0 +1,2 @@
+*.png filter=lfs diff=lfs merge=lfs -text
+*.lua text working-tree-encoding=UTF-16LE-BOM
