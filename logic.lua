@@ -1,7 +1,7 @@
 -- 0 stopped, 1 playing, 2 paused
 -- so 1 = pause icon, 2 = play icon
 musicIcons = {"", "", ""}
-networkIcons = {"", "", "ﯩ"}
+networkIcons = {"", "", "ﯩ", ""}
 -- 10-100
 batteryIcons = {"", "", "", "", "", "", "", "", "", ""}
 -- charging, error, plugged
@@ -61,6 +61,10 @@ function Update()
         elseif networkType == 24 then
             -- loopback
             currNetworkIcon = networkIcons[3]
+            currNetworkName = GetMeasure('MeasureHostName'):GetStringValue()
+        elseif networkType == 53 then
+            -- vpn?
+            currNetworkIcon = networkIcons[4]
             currNetworkName = GetMeasure('MeasureHostName'):GetStringValue()
         end
 
