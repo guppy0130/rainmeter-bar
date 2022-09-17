@@ -28,6 +28,8 @@ Run [fix-screenshots.ps1](fix-screenshots.ps1) to fix screenshots. Assumes 1920p
 * Rainmeter v4.4r3350.
 * [Spicetify](https://github.com/khanhas/spicetify-cli) (tested with v0.9.7).
 * Font [Envy Code R](https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released), patched with NerdFonts.
+  * <https://hub.docker.com/r/nerdfonts/patcher>
+  * `--complete --mono` extra args should be passed (`Bar.ini` wants mono)
 
 ### Skin Installation
 

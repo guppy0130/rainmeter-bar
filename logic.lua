@@ -92,11 +92,13 @@ function Update()
         elseif batteryState2 == 8 then
             -- charging
             return stateIcons[1]
+        elseif batteryPercent ~= nil then
+            finalBatteryIcon = batteryIcons[math.floor(batteryPercent / 10) + 1]
+            return string.format("%s %d", finalBatteryIcon, batteryPercent)
         else
-            finalBatteryIcon = batteryIcons[math.floor(batteryPercent / 10)]
+            return "?"
         end
 
-        return string.format("%s %d", finalBatteryIcon, batteryPercent)
     end
 
     function SetRight()
